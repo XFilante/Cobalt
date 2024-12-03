@@ -1,7 +1,7 @@
 {
   "name": "@filante/cobalt",
   "description": "Cobalt is an quick UI kit for AdonisJS",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "engines": {
     "node": ">=20.6.0"
   },
@@ -13,10 +13,26 @@
   ],
   "exports": {
     "./global.css": "./src/styles/global.css",
-    ".": "./build/index.js",
-    "./types": "./build/types/index.js",
-    "./components": "./build/components/index.js",
-    "./helpers": "./build/helpers/index.js"
+    ".": {
+      "types": "./build/index.d.ts",
+      "default": "./build/index.js"
+    },
+    "./types": {
+      "types": "./build/src/types/index.d.ts",
+      "default": "./build/src/types/index.js"
+    },
+    "./components": {
+      "types": "./build/src/components/index.d.ts",
+      "default": "./build/src/components/index.js"
+    },
+    "./helpers": {
+      "types": "./build/src/helpers/index.d.ts",
+      "default": "./build/src/helpers/index.js"
+    },
+    "./hooks": {
+      "types": "./build/src/hooks/index.d.ts",
+      "default": "./build/src/hooks/index.js"
+    }
   },
   "homepage": "https://github.com/XFilante/Cobalt#readme",
   "repository": "https://github.com/XFilante/Cobalt.git",

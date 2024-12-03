@@ -5,7 +5,7 @@ import { CobaltConfig } from '../types/index.js'
 
 export type CobaltContextProps<ROUTES extends Routes> = {
   children: React.ReactNode
-  cobalt: Cobalt<ROUTES>
+  cobalt?: Cobalt<ROUTES>
   mantine: MantineThemeOverride
   config: CobaltConfig
 }

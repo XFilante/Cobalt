@@ -1,6 +1,6 @@
 import { Routes } from '@filante/arcessere/types'
 import { CobaltContextProps, CobaltProvider } from './base.js'
-import { QueryClientProvider } from '@tanstack/react-query'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { MantineProvider } from '@mantine/core'
 import { ModalsProvider } from '@mantine/modals'
 import { NavigationProgress, nprogress } from '@mantine/nprogress'
@@ -56,7 +56,7 @@ export const CobaltContext = <ROUTES extends Routes>(props: CobaltContextProps<R
       </Head>
 
       <CobaltProvider value={{}}>
-        <QueryClientProvider client={props.cobalt.query}>
+        <QueryClientProvider client={props.cobalt?.query ?? new QueryClient()}>
           <MantineProvider
             theme={props.mantine}
             defaultColorScheme={props.config.theme}
