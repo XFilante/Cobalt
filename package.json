@@ -1,7 +1,7 @@
 {
-  "name": "@xfilante/cobalt",
+  "name": "@filante/cobalt",
   "description": "Cobalt is an quick UI kit for AdonisJS",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "engines": {
     "node": ">=20.6.0"
   },
@@ -13,22 +13,10 @@
   ],
   "exports": {
     "./global.css": "./src/styles/global.css",
-    ".": {
-      "types": "./index.ts",
-      "default": "./build/index.js"
-    },
-    "./types": {
-      "types": "./src/types/index.ts",
-      "default": "./build/types/index.js"
-    },
-    "./components": {
-      "types": "./src/components/index.ts",
-      "default": "./build/components/index.js"
-    },
-    "./helpers": {
-      "types": "./src/helpers/index.ts",
-      "default": "./build/helpers/index.js"
-    }
+    ".": "./build/index.js",
+    "./types": "./build/types/index.js",
+    "./components": "./build/components/index.js",
+    "./helpers": "./build/helpers/index.js"
   },
   "homepage": "https://github.com/XFilante/Cobalt#readme",
   "repository": "https://github.com/XFilante/Cobalt.git",
@@ -75,8 +63,8 @@
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
-    "@xfilante/arcessere": "0.0.1",
-    "@xfilante/imprimer": "0.0.1",
+    "@filante/arcessere": "^0.0.1",
+    "@filante/imprimer": "^0.0.1",
     "@mantine/core": "^7.13.2",
     "@mantine/form": "^7.13.2",
     "@mantine/hooks": "^7.13.2",
@@ -94,8 +82,7 @@
   "keywords": [],
   "prettier": "@adonisjs/prettier-config",
   "publishConfig": {
-    "access": "restricted",
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "c8": {
     "exclude": [

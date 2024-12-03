@@ -1,7 +1,7 @@
-# @xfilante/cobalt
+# @filante/cobalt
 
-## 0.0.2
+## 0.0.1
 
 ### Patch Changes
 
-- first version
+- First beta version release

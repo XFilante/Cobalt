@@ -1,4 +1,4 @@
-import { Routes } from '@xfilante/arcessere/types'
+import { Routes } from '@filante/arcessere/types'
 import { CobaltContextProps, CobaltProvider } from './base.js'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { MantineProvider } from '@mantine/core'

@@ -3,10 +3,12 @@
   "tasks": {
     "format": {},
     "lint": {
-      "dependsOn": ["format"]
+      "dependsOn": ["format"],
+      "inputs": ["**/*.{ts,tsx}"]
     },
     "typecheck": {
-      "dependsOn": ["format"]
+      "dependsOn": ["format"],
+      "inputs": ["**/*.{ts,tsx}"]
     },
     "test": {
       "dependsOn": ["format", "lint", "typecheck"],

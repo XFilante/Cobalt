@@ -1,5 +1,5 @@
 import { createSafeContext, MantineThemeOverride } from '@mantine/core'
-import { Routes } from '@xfilante/arcessere/types'
+import { Routes } from '@filante/arcessere/types'
 import { Cobalt } from '../index.js'
 import { CobaltConfig } from '../types/index.js'
 

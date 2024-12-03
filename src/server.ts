@@ -1,6 +1,6 @@
-import { Arcessere } from '@xfilante/arcessere'
-import { RouteKeys, Routes } from '@xfilante/arcessere/types'
-import { Imprimer } from '@xfilante/imprimer'
+import { Arcessere } from '@filante/arcessere'
+import { RouteKeys, Routes } from '@filante/arcessere/types'
+import { Imprimer } from '@filante/imprimer'
 import { GetServerSidePropsContext } from 'next'
 
 export class CobaltServer<ROUTES extends Routes, SCERK extends RouteKeys<ROUTES>> {

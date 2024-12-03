@@ -1,5 +1,5 @@
 import { useDebouncedValue, useSetState } from '@mantine/hooks'
-import { RouteKeys, Routes } from '@xfilante/arcessere/types'
+import { RouteKeys, Routes } from '@filante/arcessere/types'
 import type { Cobalt } from '../index.js'
 import { UseQueryParams } from './use_query.js'
 

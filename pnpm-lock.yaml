@@ -7,6 +7,12 @@ settings:
 importers:
   .:
     dependencies:
+      '@filante/arcessere':
+        specifier: ^0.0.1
+        version: 0.0.1(@filante/imprimer@0.0.1)
+      '@filante/imprimer':
+        specifier: ^0.0.1
+        version: 0.0.1
       '@mantine/core':
         specifier: ^7.13.2
         version: 7.14.3(@mantine/hooks@7.14.3(react@18.3.1))(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -28,12 +34,6 @@ importers:
       '@tanstack/react-query':
         specifier: ^5.52.2
         version: 5.62.0(react@18.3.1)
-      '@xfilante/arcessere':
-        specifier: 0.0.1
-        version: 0.0.1(@xfilante/imprimer@0.0.1)
-      '@xfilante/imprimer':
-        specifier: 0.0.1
-        version: 0.0.1
       case-anything:
         specifier: 3.1.0
         version: 3.1.0
@@ -406,6 +406,22 @@ packages:
         integrity: sha512-2b/g5hRmpbb1o4GnTZax9N9m0FXzz9OV42ZzI4rDDMDuHUqigAiQCEWChBWCY4ztAGVRjoWT19v0yMmc5/L5kA==,
       }
     engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
+
+  '@filante/arcessere@0.0.1':
+    resolution:
+      {
+        integrity: sha512-iAaHnOJBxnEcn55IQZQKQsskLxjWtc2W8I3po3rxITsZP2sK0B9fF/LE1V54A5GyQXl9fZlcAqTAlVaMShviCw==,
+      }
+    engines: { node: '>=20.6.0' }
+    peerDependencies:
+      '@filante/imprimer': 0.0.1
+
+  '@filante/imprimer@0.0.1':
+    resolution:
+      {
+        integrity: sha512-ajhI5X68ie1d5MwgOL+nmVVmFVajCbOJWNKvt/eT3ZUKJPJtaFlk5kz2p6vsHQ5mUkwU0vsoA3lD95ZbsamwQA==,
+      }
+    engines: { node: '>=20.6.0' }
 
   '@floating-ui/core@1.6.8':
     resolution:
@@ -1144,24 +1160,6 @@ packages:
         integrity: sha512-pq19gbaMOmFE3CbL0ZB8J8BFCo2ckfHBfaIsaOZgBIF4EoISJIdLX5xRhd0FGB0LlHReNRuzoJoMGpTjq8F2CQ==,
       }
     engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
-
-  '@xfilante/arcessere@0.0.1':
-    resolution:
-      {
-        integrity: sha512-D+xkrmHWecED9I+xL6CA1shftoZTvNujq+CiRAZ7X4w0ysUYFA898Vvm54ZojSB1z0KGoFA9qG8YU2ZYekaq/g==,
-        tarball: https://npm.pkg.github.com/download/@xfilante/arcessere/0.0.1/448e6da63960b2fe71a7fb51ed3b6c48304e3dfa,
-      }
-    engines: { node: '>=20.6.0' }
-    peerDependencies:
-      '@xfilante/imprimer': 0.0.1
-
-  '@xfilante/imprimer@0.0.1':
-    resolution:
-      {
-        integrity: sha512-CSmlG0lu7dZ1s5NW8lJYkJ7jgGYI5NBEM5KJLh9EyOF64oxNnlwUvwaxZR6zsr2NAt7tEqi7ZNqt/HutR9KlXQ==,
-        tarball: https://npm.pkg.github.com/download/@xfilante/imprimer/0.0.1/e51b3ab1fca6dc3799833ae58b03ad2107ec8d5e,
-      }
-    engines: { node: '>=20.6.0' }
 
   acorn-jsx@5.3.2:
     resolution:
@@ -5248,6 +5246,16 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
+  '@filante/arcessere@0.0.1(@filante/imprimer@0.0.1)':
+    dependencies:
+      '@filante/imprimer': 0.0.1
+      axios: 1.7.7
+      qs: 6.13.0
+    transitivePeerDependencies:
+      - debug
+
+  '@filante/imprimer@0.0.1': {}
+
   '@floating-ui/core@1.6.8':
     dependencies:
       '@floating-ui/utils': 0.2.8
@@ -5711,16 +5719,6 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.16.0
       eslint-visitor-keys: 4.2.0
-
-  '@xfilante/arcessere@0.0.1(@xfilante/imprimer@0.0.1)':
-    dependencies:
-      '@xfilante/imprimer': 0.0.1
-      axios: 1.7.7
-      qs: 6.13.0
-    transitivePeerDependencies:
-      - debug
-
-  '@xfilante/imprimer@0.0.1': {}
 
   acorn-jsx@5.3.2(acorn@8.14.0):
     dependencies:

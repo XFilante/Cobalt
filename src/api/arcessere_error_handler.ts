@@ -1,8 +1,8 @@
 import { UseFormReturnType } from '@mantine/form'
 import { notifications } from '@mantine/notifications'
-import { ArcessereError } from '@xfilante/arcessere'
+import { ArcessereError } from '@filante/arcessere'
 import { capitalCase } from 'case-anything'
-import { Imprimer } from '@xfilante/imprimer'
+import { Imprimer } from '@filante/imprimer'
 
 export const ArcessereErrorHandler = (
   logger: Imprimer,
