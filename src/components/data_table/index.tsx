@@ -14,9 +14,11 @@ import {
 } from '@mantine/core'
 import { capitalCase } from 'case-anything'
 import { Children, useMemo } from 'react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router.js'
 import { DTRows } from './types.js'
-import { DTAnchorCellD, DTCells, DTTextCellD } from './columns/index.js'
+import { DTCells } from './columns/index.js'
+import DTTextCell from './columns/text.js'
+import DTAnchorCell from './columns/anchor.js'
 
 const DataTable = <ROWS extends DTRows, CELLS extends DTCells<ROWS>>(props: {
   rows: ROWS
@@ -89,11 +91,11 @@ const DataTable = <ROWS extends DTRows, CELLS extends DTCells<ROWS>>(props: {
                             {(() => {
                               switch (cell.type) {
                                 case 'text': {
-                                  return <DTTextCellD cell={cell} row={row} router={router} />
+                                  return <DTTextCell cell={cell} row={row} router={router} />
                                 }
 
                                 case 'anchor': {
-                                  return <DTAnchorCellD cell={cell} row={row} />
+                                  return <DTAnchorCell cell={cell} row={row} />
                                 }
 
                                 case 'custom': {

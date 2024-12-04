@@ -5,15 +5,10 @@ import { MantineProvider } from '@mantine/core'
 import { ModalsProvider } from '@mantine/modals'
 import { NavigationProgress, nprogress } from '@mantine/nprogress'
 import { Notifications } from '@mantine/notifications'
-import dynamic from 'next/dynamic'
-import { useRouter } from 'next/router'
+import dynamic from 'next/dynamic.js'
+import { useRouter } from 'next/router.js'
 import { useEffect } from 'react'
-import Head from 'next/head'
-
-import '../styles/global.css'
-import '@mantine/core/styles.css'
-import '@mantine/notifications/styles.css'
-import '@mantine/nprogress/styles.css'
+import Head from 'next/head.js'
 import { MetaTags } from '../components/meta_tags.js'
 
 const GoogleAnalytics = dynamic(() => import('../components/google_analytics.js'), {

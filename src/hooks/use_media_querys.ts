@@ -1,5 +1,5 @@
 import { useMediaQuery } from '@mantine/hooks'
-import { BREAKPOINTS } from '../const'
+import { BREAKPOINTS } from '../const.js'
 
 /**
  * Custom hook to handle media queries.

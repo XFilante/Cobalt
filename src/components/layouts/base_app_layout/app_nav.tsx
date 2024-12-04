@@ -1,9 +1,9 @@
 import { AppShell, Stack, Text } from '@mantine/core'
-import { NavButton, NavButtonProps } from './app_nav_components/button'
-import { NavDivider, NavDividerProps } from './app_nav_components/divider'
+import { NavButton, NavButtonProps } from './app_nav_components/button.js'
+import { NavDivider, NavDividerProps } from './app_nav_components/divider.js'
 import { Children } from 'react'
-import { useRouter } from 'next/router'
-import { HEADER_HEIGHT } from '../../../const'
+import { useRouter } from 'next/router.js'
+import { HEADER_HEIGHT } from '../../../const.js'
 
 export type NavTypes = NavButtonProps | NavDividerProps
 

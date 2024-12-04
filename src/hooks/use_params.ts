@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router.js'
 
 export const useParams = <KEYS>() => {
   const router = useRouter()

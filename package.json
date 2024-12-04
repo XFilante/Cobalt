@@ -1,7 +1,7 @@
 {
   "name": "@filante/cobalt",
   "description": "Cobalt is an quick UI kit for AdonisJS",
-  "version": "0.0.0",
+  "version": "0.0.7",
   "engines": {
     "node": ">=20.6.0"
   },
@@ -12,7 +12,7 @@
     "!build/tests"
   ],
   "exports": {
-    "./global.css": "./src/styles/global.css",
+    "./global.css": "./build/src/styles/global.css",
     ".": {
       "types": "./build/index.d.ts",
       "default": "./build/index.js"
@@ -43,7 +43,7 @@
     "format": "prettier --write .",
     "test": "c8 nr quick:test",
     "prebuild": "nr clean",
-    "build": "tsc",
+    "build": "tsc && cpy ./src/styles ./build",
     "changelog": "na changeset",
     "release:version": "changeset version",
     "release": "nr release:version && changeset publish",
@@ -69,6 +69,7 @@
     "@types/react-dom": "^18",
     "c8": "^10.1.2",
     "copyfiles": "^2.4.1",
+    "cpy-cli": "^5.0.0",
     "del-cli": "^5.1.0",
     "eslint": "^9",
     "husky": "^9.1.6",
@@ -79,19 +80,18 @@
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
-    "@filante/arcessere": "^0.0.1",
-    "@filante/imprimer": "^0.0.1",
-    "@mantine/core": "^7.13.2",
-    "@mantine/form": "^7.13.2",
-    "@mantine/hooks": "^7.13.2",
-    "@mantine/modals": "^7.13.2",
-    "@mantine/notifications": "^7.13.2",
-    "@mantine/nprogress": "^7.13.4",
+    "@filante/arcessere": "^0.0.3",
+    "@filante/imprimer": "^0.0.2",
+    "@mantine/core": "^7.14.3",
+    "@mantine/form": "^7.14.3",
+    "@mantine/hooks": "^7.14.3",
+    "@mantine/modals": "^7.14.3",
+    "@mantine/notifications": "^7.14.3",
+    "@mantine/nprogress": "^7.14.3",
     "@tanstack/react-query": "^5.52.2",
-    "next": "14.2.6",
     "react": "^18",
     "react-dom": "^18",
-    "supports-color": "8.1.1"
+    "next": "15.0.3"
   },
   "author": "mohitxskull, XFilante",
   "license": "MIT",

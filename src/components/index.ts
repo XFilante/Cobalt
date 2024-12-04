@@ -2,12 +2,9 @@ export * from './data_table/index.js'
 export * from './form/index.js'
 
 export * from './page_header/index.js'
-export { PageHeaderD } from './page_header/dynamic.js'
 
 export * from './vertical/index.js'
-export { VerticalD } from './vertical/dynamic.js'
 
-export { DynamicSkeleton } from './skeleton/dynamic.js'
 export { CenterLoading } from './center_loading.js'
 export { CenterMessage } from './center_message.js'
 export { HeadScript } from './head_script.js'

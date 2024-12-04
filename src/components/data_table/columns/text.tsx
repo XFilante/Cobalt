@@ -1,7 +1,7 @@
 import { PolymorphicComponentProps, Text, TextProps } from '@mantine/core'
 import { useClipboard } from '@mantine/hooks'
 import { useMemo } from 'react'
-import { NextRouter } from 'next/router'
+import { NextRouter } from 'next/router.js'
 import { DTCellCompProps, DTCellProps, DTRows } from '../types.js'
 import { ifProp, ifProps } from '../../../helpers/if_props.js'
 import { getDescendantPropsSingle } from '../../../helpers/get_descendent_props.js'

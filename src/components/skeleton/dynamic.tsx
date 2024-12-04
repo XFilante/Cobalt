@@ -1,5 +1,5 @@
 import { Center, Paper, Skeleton, Text } from '@mantine/core'
-import { DynamicOptionsLoadingProps } from 'next/dynamic'
+import { DynamicOptionsLoadingProps } from 'next/dynamic.js'
 
 export const DynamicSkeleton = (props: {
   options: DynamicOptionsLoadingProps

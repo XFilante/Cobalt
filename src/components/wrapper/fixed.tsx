@@ -1,4 +1,4 @@
-import Vertical, { VerticalProps } from '../vertical'
+import Vertical, { VerticalProps } from '../vertical/index.js'
 
 type Props = VerticalProps
 

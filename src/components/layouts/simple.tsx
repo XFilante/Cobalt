@@ -1,6 +1,6 @@
 import { AppShell, Box } from '@mantine/core'
-import { ifProp, ifProps } from '../../helpers'
-import { HEADER_HEIGHT } from '../../const'
+import { ifProp, ifProps } from '../../helpers/index.js'
+import { HEADER_HEIGHT } from '../../const.js'
 
 type Props = {
   children: React.ReactNode

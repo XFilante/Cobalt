@@ -1,5 +1,5 @@
 import { rem } from '@mantine/core'
-import { useMediaQuerys } from './use_media_querys'
+import { useMediaQuerys } from './use_media_querys.js'
 
 export const sizeHelper =
   (
