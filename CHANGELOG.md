@@ -1,5 +1,17 @@
 # @filante/cobalt
 
+## 0.0.9
+
+### Patch Changes
+
+- using mq rather than media-querys in size-helper-factory
+
+## 0.0.8
+
+### Patch Changes
+
+- fixed the return type to size-helper hook
+
 ## 0.0.7
 
 ### Patch Changes
