@@ -1,37 +1,43 @@
 # @filante/cobalt
 
+## 0.0.10
+
+### Patch Changes
+
+- Updated to react 19
+
 ## 0.0.9
 
 ### Patch Changes
 
-- using mq rather than media-querys in size-helper-factory
+- Using mq rather than media-querys in size-helper-factory
 
 ## 0.0.8
 
 ### Patch Changes
 
-- fixed the return type to size-helper hook
+- Fixed the return type to size-helper hook
 
 ## 0.0.7
 
 ### Patch Changes
 
-- fourth version
+- Fourth version
 
 ## 0.0.6
 
 ### Patch Changes
 
-- thrid version release
+- Third version release
 
 ## 0.0.5
 
 ### Patch Changes
 
-- second version
+- Second version
 
 ## 0.0.4
 
 ### Patch Changes
 
-- first version
+- First version

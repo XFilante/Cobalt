@@ -1,7 +1,7 @@
 {
   "name": "@filante/cobalt",
   "description": "Cobalt is an quick UI kit for AdonisJS",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "engines": {
     "node": ">=20.6.0"
   },
@@ -89,9 +89,9 @@
     "@mantine/notifications": "^7.14.3",
     "@mantine/nprogress": "^7.14.3",
     "@tanstack/react-query": "^5.52.2",
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "15.0.3"
+    "react": "^19",
+    "react-dom": "^19",
+    "next": "15.1.0"
   },
   "author": "mohitxskull, XFilante",
   "license": "MIT",
