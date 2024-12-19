@@ -4,19 +4,24 @@ import {
   Checkbox,
   CheckboxProps,
   ComboboxData,
+  NumberInput,
+  NumberInputProps,
   PasswordInput,
   PasswordInputProps,
   Select,
   SelectProps,
   SimpleGrid,
   Stack,
+  StackProps,
   Text,
+  Textarea,
+  TextareaProps,
   TextInput,
   TextInputProps,
 } from '@mantine/core'
 import { UseFormReturnType } from '@mantine/form'
 import { UseMutationResult } from '@tanstack/react-query'
-import { Children } from 'react'
+import React, { Children } from 'react'
 import { Paths } from '../../types/index.js'
 
 const Form = <
@@ -54,6 +59,20 @@ const Form = <
         props?: CheckboxProps
       }
     | {
+        type: 'textarea'
+        label: string
+        placeholder: string
+        key: KEY
+        props?: TextareaProps
+      }
+    | {
+        type: 'number'
+        label: string
+        placeholder: string
+        key: KEY
+        props?: NumberInputProps
+      }
+    | {
         type: 'custom'
         render: React.ReactNode
       },
@@ -63,12 +82,18 @@ const Form = <
   children: (FIELD | [FIELD, FIELD])[]
   submit: (input: INPUT) => void
 
+  section?: {
+    beforeSubmit?: React.ReactNode
+    afterSubmit?: React.ReactNode
+  }
+
   formProps?: {
     beforeSubmit?: (values: INPUT) => void | undefined
     submitProps?: {
       label?: string
       props?: ButtonProps
     }
+    stack?: StackProps
   }
 }) => {
   const columnParser = (field: FIELD) => {
@@ -138,6 +163,38 @@ const Form = <
         )
       }
 
+      case 'textarea': {
+        return (
+          <>
+            <Textarea
+              required
+              withAsterisk={false}
+              disabled={props.mutation.isPending}
+              {...props.form.getInputProps(field.key.join('.'))}
+              {...field.props}
+              label={field.label}
+              placeholder={field.placeholder}
+            />
+          </>
+        )
+      }
+
+      case 'number': {
+        return (
+          <>
+            <NumberInput
+              required
+              withAsterisk={false}
+              disabled={props.mutation.isPending}
+              {...props.form.getInputProps(field.key.join('.'))}
+              {...field.props}
+              label={field.label}
+              placeholder={field.placeholder}
+            />
+          </>
+        )
+      }
+
       case 'custom': {
         return field.render
       }
@@ -163,7 +220,7 @@ const Form = <
           props.submit(values)
         })}
       >
-        <Stack>
+        <Stack {...props.formProps?.stack}>
           {Children.toArray(
             props.children.map((child) => {
               if (Array.isArray(child)) {
@@ -181,6 +238,8 @@ const Form = <
             })
           )}
 
+          {props.section?.beforeSubmit}
+
           <Button
             variant="filled"
             {...props.formProps?.submitProps?.props}
@@ -189,6 +248,8 @@ const Form = <
           >
             {props.formProps?.submitProps?.label || 'Submit'}
           </Button>
+
+          {props.section?.afterSubmit}
         </Stack>
       </form>
     </>

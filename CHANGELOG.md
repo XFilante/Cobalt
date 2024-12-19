@@ -1,5 +1,11 @@
 # @filante/cobalt
 
+## 0.0.11
+
+### Patch Changes
+
+- added textarea and number component into form component
+
 ## 0.0.10
 
 ### Patch Changes

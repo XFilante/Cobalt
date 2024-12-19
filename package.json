@@ -1,7 +1,7 @@
 {
   "name": "@filante/cobalt",
   "description": "Cobalt is an quick UI kit for AdonisJS",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "engines": {
     "node": ">=20.6.0"
   },
