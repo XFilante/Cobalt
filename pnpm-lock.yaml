@@ -136,22 +136,22 @@ importers:
         specifier: ^0.0.4
         version: 0.0.4(@vinejs/vine@3.0.0)(eslint@9.17.0)(prettier@3.4.2)
       '@mantine/core':
-        specifier: ^7.15.0
+        specifier: ^7.15.1
         version: 7.15.1(@mantine/hooks@7.15.1(react@19.0.0))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@mantine/form':
-        specifier: ^7.15.0
+        specifier: ^7.15.1
         version: 7.15.1(react@19.0.0)
       '@mantine/hooks':
-        specifier: ^7.15.0
+        specifier: ^7.15.1
         version: 7.15.1(react@19.0.0)
       '@mantine/modals':
-        specifier: ^7.15.0
+        specifier: ^7.15.1
         version: 7.15.1(@mantine/core@7.15.1(@mantine/hooks@7.15.1(react@19.0.0))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@mantine/hooks@7.15.1(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@mantine/notifications':
-        specifier: ^7.15.0
+        specifier: ^7.15.1
         version: 7.15.1(@mantine/core@7.15.1(@mantine/hooks@7.15.1(react@19.0.0))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@mantine/hooks@7.15.1(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@mantine/nprogress':
-        specifier: ^7.15.0
+        specifier: ^7.15.1
         version: 7.15.1(@mantine/core@7.15.1(@mantine/hooks@7.15.1(react@19.0.0))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@mantine/hooks@7.15.1(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@tabler/icons-react':
         specifier: ^3.26.0
