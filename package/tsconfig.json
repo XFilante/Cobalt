@@ -7,6 +7,6 @@
     "module": "ESNext",
     "lib": ["DOM", "ESNext", "DOM.Iterable", "ES2020"],
     "types": ["node"],
-    "jsx": "react-jsx",
+    "jsx": "react-jsx"
   }
 }
