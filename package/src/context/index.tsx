@@ -53,7 +53,6 @@ export const CobaltContext = <ROUTES extends Routes>(props: CobaltContextProps<R
       <CobaltProvider value={{}}>
         <QueryClientProvider client={props.cobalt?.query ?? new QueryClient()}>
           <MantineProvider
-          
             theme={props.mantine}
             defaultColorScheme={props.config.theme}
             {...(props.config.forceTheme && {

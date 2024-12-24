@@ -70,8 +70,8 @@ export const MantineTheme = createTheme({
     },
   },
 
-  focusRing: 'always',
-  focusClassName: 'IBM-focus-ring',
+  // focusRing: 'always',
+  // focusClassName: 'IBM-focus-ring',
 
   colors: {
     blue,
@@ -85,23 +85,30 @@ export const MantineTheme = createTheme({
 
   respectReducedMotion: true,
 
-  components: {
-    Button: {
-      defaultProps: {
-        fw: '400',
-        justify: 'left',
-      },
-    },
-    ActionIcon: {
-      defaultProps: {
-        variant: 'subtle',
-        color: 'white',
-      },
-    },
-    Divider: {
-      defaultProps: {
-        color: 'gray.6',
-      },
-    },
-  },
+  // components: {
+  //   Button: {
+  //     defaultProps: {
+  //       fw: '400',
+  //       justify: 'space-between',
+  //       size: 'md',
+  //       mih: 50,
+  //     },
+  //     styles: {
+  //       label: {
+  //         minWidth: 100,
+  //       },
+  //     },
+  //   },
+  //   ActionIcon: {
+  //     defaultProps: {
+  //       variant: 'subtle',
+  //       color: 'white',
+  //     },
+  //   },
+  //   Divider: {
+  //     defaultProps: {
+  //       color: 'gray.6',
+  //     },
+  //   },
+  // },
 });

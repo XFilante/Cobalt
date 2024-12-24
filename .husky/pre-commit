@@ -1,5 +1,1 @@
 . .husky/common.sh
-
-ni
-
-nr check
