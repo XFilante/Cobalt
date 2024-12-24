@@ -1,6 +1,6 @@
 import { createSafeContext, MantineThemeOverride } from '@mantine/core'
 import { Routes } from '@filante/arcessere/types'
-import { Cobalt } from '../index.js'
+import { Cobalt } from '../main.js'
 import { CobaltConfig } from '../types/index.js'
 
 export type CobaltContextProps<ROUTES extends Routes> = {

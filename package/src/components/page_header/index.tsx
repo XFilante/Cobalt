@@ -7,7 +7,7 @@ type Props = {
   description?: string
 }
 
-const PageHeader = (props: Props) => (
+export const PageHeader = (props: Props) => (
   <>
     <Stack gap="xs">
       <Group justify="space-between">
@@ -19,8 +19,8 @@ const PageHeader = (props: Props) => (
       </Group>
 
       {props.description && (
-        <Text c="dimmed" size="sm">
-          {capitalCase(props.description)}
+        <Text c="dimmed" size="sm" span>
+          {props.description}
         </Text>
       )}
 
@@ -28,6 +28,3 @@ const PageHeader = (props: Props) => (
     </Stack>
   </>
 )
-
-export { PageHeader }
-export default PageHeader

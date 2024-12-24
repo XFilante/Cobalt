@@ -1,10 +1,8 @@
 import { QueryKey, UseMutationOptions, useMutation as useTanMutation } from '@tanstack/react-query'
-import { Text, TextProps } from '@mantine/core'
 import { RouteKeys, Routes } from '@filante/arcessere/types'
 import { ArcessereErrorHandler } from '../api/arcessere_error_handler.js'
-import { modals } from '@mantine/modals'
 import { UseFormReturnType } from '@mantine/form'
-import type { Cobalt } from '../index.js'
+import type { Cobalt } from '../main.js'
 
 export type UseMutationParams<
   ROUTES extends Routes,
@@ -19,13 +17,6 @@ export type UseMutationParams<
   >
 
   form?: UseFormReturnType<EP['input']>
-
-  confirmation?: {
-    title?: string
-    message:
-      | { type: 'text'; value: string; props?: TextProps }
-      | { type: 'custom'; render: React.ReactNode }
-  }
 
   onSuccess: (data: EP['output']) => {
     input?: EP['input']
@@ -58,13 +49,15 @@ export const useMutation = <
         for (const queryKey of queryKeys) {
           cobalt.query.invalidateQueries({
             queryKey,
+            exact: true,
+            type: 'active',
           })
         }
       }
 
       if (params.form && res?.input) {
-        params.form.reset()
         params.form.setValues(res.input)
+        params.form.reset()
       }
 
       if (res?.after) {
@@ -76,58 +69,12 @@ export const useMutation = <
     },
   })
 
-  const submitInternalMutation = (input: EP['input']) => {
-    if (params.confirmation) {
-      modals.openConfirmModal({
-        title: params.confirmation.title || 'Please confirm your action',
-        children: (
-          <>
-            {(() => {
-              switch (params.confirmation.message.type) {
-                case 'text': {
-                  return (
-                    <>
-                      <Text size="sm" {...params.confirmation.message.props}>
-                        {params.confirmation.message.value}
-                      </Text>
-                    </>
-                  )
-                }
-
-                case 'custom': {
-                  return params.confirmation.message.render
-                }
-
-                default: {
-                  return <Text c="red">Unsupported confirmation message type</Text>
-                }
-              }
-            })()}
-          </>
-        ),
-        closeOnCancel: true,
-        closeOnConfirm: true,
-        closeOnEscape: true,
-        centered: true,
-        labels: { confirm: 'Delete', cancel: 'Cancel' },
-        confirmProps: {
-          loading: internalMutation.isPending,
-          color: 'red',
-        },
-        cancelProps: {
-          disabled: internalMutation.isPending,
-        },
-        onConfirm: () => internalMutation.mutate(input),
-      })
-
-      return
-    }
-
-    internalMutation.mutate(input)
+  const mutate = (input: EP['input']) => {
+    return internalMutation.mutateAsync(input)
   }
 
   return [
-    internalMutation as Omit<typeof internalMutation, 'mutation'>,
-    submitInternalMutation,
+    internalMutation as Omit<typeof internalMutation, 'mutate' | 'mutateAsync'>,
+    mutate,
   ] as const
 }

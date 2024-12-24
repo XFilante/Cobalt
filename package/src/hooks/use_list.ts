@@ -1,7 +1,8 @@
 import { useDebouncedValue, useSetState } from '@mantine/hooks'
 import { RouteKeys, Routes } from '@filante/arcessere/types'
-import type { Cobalt } from '../index.js'
+import type { Cobalt } from '../main.js'
 import { UseQueryParams } from './use_query.js'
+import { SetPartialState } from '../types/form.js'
 
 export type UseListParams<
   ROUTES extends Routes,
@@ -39,9 +40,7 @@ export const useList = <
     internalQueryCall,
     [
       internalBody as EP['input'],
-      setInternalBody as unknown as (
-        statePartial: Partial<EP['input']> | ((currentState: EP['input']) => Partial<EP['input']>)
-      ) => void,
+      setInternalBody as unknown as SetPartialState<NonNullable<EP['input']>>,
     ],
   ] as const
 }

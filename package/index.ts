@@ -7,7 +7,7 @@
 |
 */
 
-export { Cobalt } from './src/index.js'
+export { Cobalt } from './src/main.js'
 export { CobaltServer } from './src/server.js'
 export { CobaltContext } from './src/context/index.js'
 export { useCobaltContext } from './src/context/base.js'

@@ -7,11 +7,11 @@ export const BREAKPOINTS = {
 }
 
 export const ICON_SIZE = {
-  XS: 12,
-  SM: 16,
-  MD: 18,
-  LG: 20,
-  XL: 24,
+  XS: 16,
+  SM: 20,
+  MD: 24,
+  LG: 32,
+  XL: 40,
 }
 
-export const HEADER_HEIGHT = 50
+export const HEADER_HEIGHT = 47

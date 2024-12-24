@@ -1,6 +1,7 @@
 import { cobalt } from '@/configs/cobalt';
 import { User } from '@/configs/routes';
 import { Form } from '@filante/cobalt/components';
+import { TextInput } from '@mantine/core';
 import { notifications } from '@mantine/notifications';
 
 type Props = {
@@ -8,10 +9,10 @@ type Props = {
 };
 
 export const UserUpdateForm = (props: Props) => {
-  const [form, [mutation, submit]] = cobalt.useForm({
+  const [form, getProps, [mutation, submit]] = cobalt.useForm({
     endpoint: 'API_V1_USER_UPDATE',
     form: {
-      initialValues: {
+      values: {
         params: { id: props.user.id },
         email: props.user.email,
         name: props.user.name,
@@ -42,29 +43,12 @@ export const UserUpdateForm = (props: Props) => {
 
   return (
     <>
-      <Form mutation={mutation} submit={submit} form={form}>
-        {[
-          [
-            {
-              type: 'text',
-              label: 'Full Name',
-              placeholder: 'John',
-              key: ['name'],
-            },
-            {
-              type: 'text',
-              label: 'Email',
-              placeholder: 'xxx@xxx.xxx',
-              key: ['email'],
-            },
-          ],
-          {
-            type: 'datetime',
-            label: 'Birthday',
-            placeholder: 'Your birthday',
-            key: ['birthday'],
-          },
-        ]}
+      <Form mutation={mutation} form={form} submit={submit}>
+        <TextInput
+          {...getProps(['name'])}
+          label="Name"
+          placeholder="John Doe"
+        />
       </Form>
     </>
   );

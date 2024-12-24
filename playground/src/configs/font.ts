@@ -1,14 +1,16 @@
-import localFont from "next/font/local";
+import { IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
 
-const GeistSans = localFont({
-  src: "../pages/fonts/GeistVF.woff",
+const IBM_PLEX_SANS = IBM_Plex_Sans({
+  weight: ['300', '400', '600'],
+  subsets: ['latin'],
+  display: "swap"
 });
-
-const GeistMono = localFont({
-  src: "../pages/fonts/GeistMonoVF.woff",
+const IBM_PLEX_MONO = IBM_Plex_Mono({
+  weight: '100',
+  subsets: ['latin'],
 });
 
 export const FONTS = {
-  GEIST: GeistSans.style.fontFamily,
-  GEIST_MONO: GeistMono.style.fontFamily,
+  IBM_PLEX_SANS: IBM_PLEX_SANS.style.fontFamily,
+  IBM_PLEX_MONO: IBM_PLEX_MONO.style.fontFamily,
 };

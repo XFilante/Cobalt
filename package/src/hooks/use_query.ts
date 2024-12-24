@@ -1,6 +1,6 @@
 import { UndefinedInitialDataOptions, useQuery as useTanQuery } from '@tanstack/react-query'
 import { RouteKeys, Routes } from '@filante/arcessere/types'
-import type { Cobalt } from '../index.js'
+import type { Cobalt } from '../main.js'
 
 export type UseQueryParams<
   ROUTES extends Routes,

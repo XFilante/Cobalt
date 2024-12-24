@@ -69,7 +69,7 @@
   },
   "peerDependencies": {
     "@filante/arcessere": "^0.0.3",
-    "@filante/imprimer": "^0.0.2",
+    "@filante/imprimer": "^0.0.6",
     "@mantine/core": "^7.15.1",
     "@mantine/dates": "^7.15.1",
     "@mantine/form": "^7.15.1",

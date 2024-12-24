@@ -1,4 +1,4 @@
-import { AppShell, Box } from '@mantine/core'
+import { AppShell, Box, Stack } from '@mantine/core'
 import { ifProp, ifProps } from '../../helpers/index.js'
 import { HEADER_HEIGHT } from '../../const.js'
 
@@ -25,9 +25,9 @@ export const SimpleLayout = (props: Props) => (
         </AppShell.Header>
       )}
       <AppShell.Main>
-        <Box px="sm" h={ifProp(!!props.header, `calc(100vh - ${HEADER_HEIGHT}px)`, '100vh')}>
+        <Stack px="sm" h={ifProp(!!props.header, `calc(100vh - ${HEADER_HEIGHT}px)`, '100vh')}>
           {props.children}
-        </Box>
+        </Stack>
       </AppShell.Main>
     </AppShell>
   </>

@@ -2,7 +2,7 @@ import type { CobaltConfig as CC } from "@filante/cobalt/types";
 
 export const CobaltConfig: CC = {
   theme: 'light',
-  forceTheme: false,
+  forceTheme: true,
   meta: {
     title: 'Cobalt',
     description: "Don't build from scratch",

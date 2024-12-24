@@ -1,0 +1,4 @@
+/* IBM Focus Rings */
+.IBM-focus-ring:focus-within {
+  border: 2px solid white;
+}

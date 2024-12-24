@@ -4,6 +4,7 @@ import { CobaltContext } from '@filante/cobalt';
 
 import type { AppProps } from 'next/app';
 
+import '../styles/global.css';
 import '@filante/cobalt/global.css';
 import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
